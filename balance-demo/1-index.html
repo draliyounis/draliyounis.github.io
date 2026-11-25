@@ -1,0 +1,37 @@
+<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>رصيدي - د. علي يونس</title>
+<style>
+:root{--gold:#f0b429;--ink:#07194a;--navy:#12233f;--mut:#a9b4c8;--txt:#e9edf5}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(160deg,var(--navy),var(--ink));color:var(--txt);font-family:Cairo,"Noto Sans Arabic","Segoe UI",Tahoma,sans-serif;display:flex;justify-content:center;padding:20px}
+.card{width:100%;max-width:460px;border:2px solid var(--gold);border-radius:18px;padding:26px 22px;background:rgba(7,25,74,.55);align-self:flex-start;margin-top:20px}
+.ban{background:#7a1f1f;color:#fff;border-radius:10px;padding:6px 10px;font-size:13px;text-align:center;margin-bottom:14px}
+h1{color:var(--gold);text-align:center;margin:4px 0;font-size:26px}.sub{color:var(--mut);text-align:center;margin-bottom:18px}
+input{width:100%;padding:14px;border-radius:10px;border:1px solid var(--gold);background:#0b1d44;color:#fff;font-size:18px;text-align:center;direction:ltr;letter-spacing:1px}
+button{width:100%;margin-top:12px;padding:14px;border:0;border-radius:10px;background:var(--gold);color:#07194a;font-weight:800;font-size:18px;font-family:inherit}
+.err{color:#ff9a9a;text-align:center;margin-top:12px;min-height:22px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid rgba(240,180,41,.25);font-size:18px}.row span:first-child{color:var(--mut)}
+.ok{color:#7fe3a0;font-weight:700}.rem{color:var(--gold);font-weight:700}.f{color:var(--mut);font-size:13px;text-align:center;margin-top:14px}
+</style></head><body><div class="card">
+<div class="ban">نموذج تجريبي</div>
+<h1>رصيدي</h1><div class="sub">د. علي يونس · ادخل الكود الخاص بيك</div>
+<div id="f"><input id="c" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="الكود"><button id="b" type="button">اعرض رصيدي</button><div class="err" id="e"></div></div>
+<div id="r" style="display:none"></div></div>
+<script>
+const DATA={"7fe1c6a925d7a8c0f8927e7f8eaf4081":{"iv":"xWe83PyqNKR2aqcN","ct":"xxxHwQXzTcYsD9Q1Yg4rn+/81KHhLPSMnrBdR5+zOW0uscysyrGpDHlQOJSmIMx92CVZbObdtOvSFpvFIH9PDefBiOkApVGQayslDlvjUAC2lXf4jW7iMhW7Oxtqc7qfvmIIya6rwAChwK7RXI3mT8zcjMdOEs7ablXT/4GZwO23jv1/ToXnKdM/zADPjebbHN8c+QtLkWvp4Maw1Ef22HoNIv8QTxjkcVMose/iO7orSpdNNsY="},"d12461565eda347e4ffb38d837b96322":{"iv":"bKxD1SH2r6ehF9/0","ct":"Svoy4dYIsNXHTCeQi/Wy1n7eVfxF5gjwcASVm3nTIJvYLcNHRTPekLgKDJ5gYC03iY3HWE/h8Ld9fSu45lEb6lnrrbqYG6HRFCIYoMSXmEzlLb2GD7SzgzEp6CaiAca4EOXpv+bx8Iob32eeEcCwI/E9tU43h9N8zgOHkmKzErQQH8uy7QGNHPwUPYePYl9axWvAVLJbOePuLWP1g+LNJf2+BbrjAwHtaQcjyU0Zq5TYfv2RamA1gcHdz4pDs3XWzlztAa32b5quRCvoCbM7bVpzJOu11gnSrSjmNqzmzBV+dLg="},"e5d3351fedbef96a5f5a677ae5089edc":{"iv":"uq8+xfl+pLM1HagM","ct":"GWwjzIGlkalJjbexdmgsUjgyGCsFmJAitMn8vsoVLgfELv3feLQXwxMay7qv8ztdiVOLYGDEWkHVGzfQOPsO8KGYSO5GxdpqqrGQ4WhcREH1i8SyAZEH1lVa2yHG7fNHtDH4fi62sxT9NYR6kCNlL28EstXdf5czWF9n8QjIq2Zy52pKFjz4nymxV1EIcAns9QIZ/dJZmW+wzuMX2Axkt8X/"}},ITER=200000;
+const enc=new TextEncoder(),b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function kdf(code,salt,bits){const k=await crypto.subtle.importKey("raw",enc.encode(code),"PBKDF2",false,["deriveBits"]);return new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:enc.encode(salt),iterations:ITER},k,bits))}
+async function show(code){
+ const e=document.getElementById("e");e.textContent="";code=code.trim().toLowerCase();
+ if(!code){e.textContent="اكتب الكود";return}
+ try{const id=[...await kdf(code,"id-v1",128)].map(x=>x.toString(16).padStart(2,"0")).join("");
+ const rec=DATA[id];if(!rec)throw 0;
+ const key=await crypto.subtle.importKey("raw",await kdf(code,"key-v1",256),"AES-GCM",false,["decrypt"]);
+ const d=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(rec.iv)},key,b64(rec.ct))));
+ const li=a=>a.length?a.join("، "):"-";
+ document.getElementById("f").style.display="none";const r=document.getElementById("r");r.style.display="block";
+ r.innerHTML='<div class="row"><span>الاسم</span><b></b></div><div class="row"><span>المبلغ المدفوع</span><b></b></div><div class="row"><span>الملازم المستلمة</span><span class="ok"></span></div><div class="row"><span>المتبقي</span><span class="rem"></span></div><div class="f"></div>';
+ const q=r.querySelectorAll("b,.ok,.rem,.f");q[0].textContent=d.name;q[1].textContent=d.paid+" جنيه";q[2].textContent=li(d.got);q[3].textContent=li(d.left);q[4].textContent="آخر تحديث: "+d.updated;
+ }catch(x){e.textContent="الكود غير صحيح"}}
+document.getElementById("b").onclick=()=>show(document.getElementById("c").value);
+document.getElementById("c").onkeydown=e=>{if(e.key==="Enter")show(e.target.value)};
+const h=location.hash.slice(1);if(h){document.getElementById("c").value=h;show(h)}
+</script></body></html>
