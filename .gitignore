@@ -1,0 +1,8 @@
+.token
+.ghtoken
+*.zip
+deploy*.json
+index-src.bak
+add_*.py
+crop*.py
+build_assets.py
