@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=46ef09c4-dabc-4f5a-be56-07d112a95590
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>د. علي يونس | ملازم قانونية</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#07194a;--navy:#12233f;--gold:#f0b429;--gold2:#ffdf8a;--txt:#e9edf5;--mut:#a9b4c8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Cairo,"Segoe UI",Tahoma,Arial,sans-serif;background:var(--ink);color:var(--txt);line-height:1.9;overflow-x:hidden}
+nav{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(7,25,74,.75);backdrop-filter:blur(10px);border-bottom:1px solid #ffffff12}
+nav b{color:var(--gold2);font-size:1.1rem}
+nav div a{color:var(--txt);text-decoration:none;margin-inline-start:22px;font-size:.95rem;opacity:.85;transition:.3s}
+nav div a:hover{color:var(--gold);opacity:1}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px 80px;position:relative;overflow:hidden;background:radial-gradient(circle at 30% 20%,#1f58d6 0,transparent 60%),radial-gradient(circle at 80% 80%,#5a3a08 0,transparent 50%),var(--ink)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:float 12s ease-in-out infinite}
+.b1{width:340px;height:340px;background:#2f6bff;top:8%;right:6%}
+.b2{width:300px;height:300px;background:var(--gold);bottom:6%;left:8%;animation-delay:-5s}
+@keyframes float{50%{transform:translate(30px,-40px) scale(1.12)}}
+.hero>*:not(.blob){position:relative;z-index:1}
+.ph{width:min(240px,60vw);aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:50% 12%;border:4px solid var(--gold);box-shadow:0 0 0 8px #f0b4291f,0 20px 60px #0009;margin-bottom:10px;animation:up 1s both,glow 4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 14px #f0b42926,0 20px 70px #0009}}
+.tag{border:1px solid var(--gold);color:var(--gold2);padding:4px 18px;border-radius:30px;font-size:.9rem;animation:up 1s both}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;margin:18px 0 6px;line-height:1.3;background:linear-gradient(90deg,#fff,var(--gold2),#fff);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up 1s .15s both,shine 6s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.hero p{color:var(--mut);font-size:1.25rem;margin:0 0 30px;animation:up 1s .3s both}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),#c9822a);color:#1a1205;padding:14px 38px;border-radius:40px;text-decoration:none;font-weight:800;transition:.3s;box-shadow:0 8px 30px #e0a84a40;animation:up 1s .45s both}
+.btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 14px 40px #e0a84a66}
+section{max-width:1000px;margin:0 auto;padding:80px 22px}
+h2{font-size:2rem;font-weight:800;margin:0 0 28px;position:relative;display:inline-block}
+h2::after{content:"";position:absolute;right:0;bottom:-6px;width:60%;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gold),transparent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:30px}
+.stat{background:linear-gradient(160deg,#12348a,#0a225e);border:1px solid #ffffff14;border-radius:16px;padding:22px;text-align:center;transition:.4s}
+.stat:hover{transform:translateY(-6px);border-color:var(--gold)}
+.stat strong{display:block;font-size:1.8rem;color:var(--gold2)}
+.stat span{color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
+.card{background:linear-gradient(160deg,#12348a,#0a225e);border:1px solid #ffffff14;border-radius:18px;padding:26px;transition:.4s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--gold),#c9822a)}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px #0008;border-color:var(--gold)}
+.ic{font-size:1.6rem;font-weight:800;color:var(--gold);opacity:.8}
+.card h3{margin:6px 0;font-size:1.25rem;color:#fff}
+.card p{color:var(--mut);margin:0 0 12px}
+.card a{color:var(--gold);font-weight:600;text-decoration:none}
+.card a.order{display:inline-block;background:linear-gradient(135deg,var(--gold),#c9822a);color:#1a1205;padding:8px 22px;border-radius:30px;font-weight:800;transition:.3s}
+.card a.order:hover{transform:translateY(-2px);box-shadow:0 8px 24px #e0a84a55}
+.card .subs{font-size:.92rem;color:var(--txt);background:#ffffff08;border-radius:10px;padding:10px 14px;margin:0 0 12px}
+.card .subs b{color:var(--gold2)}
+.logo{height:36px;width:auto;vertical-align:middle;margin-inline-end:10px}
+.samples{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.samples a{display:block;align-self:start;border-radius:12px;overflow:hidden;border:1px solid #ffffff14;transition:.3s}
+.samples a:hover{transform:translateY(-4px);border-color:var(--gold)}
+.samples img{width:100%;display:block}
+.subj{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #ffffff10}
+.subj:last-child{border-bottom:none}
+.subj span{font-size:.92rem;color:var(--txt)}
+.subbtn{flex-shrink:0;font-size:.78rem;color:var(--gold);border:1px solid var(--gold);border-radius:20px;padding:2px 12px;text-decoration:none;font-weight:600;transition:.3s}
+.subbtn:hover{background:var(--gold);color:#1a1205}
+.contact{text-align:center}
+.contact p{font-size:1.2rem}
+.contact strong{color:var(--gold2);font-size:1.5rem;letter-spacing:1px}
+footer{text-align:center;padding:26px;color:var(--mut);font-size:.9rem;border-top:1px solid #ffffff12}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:560px){nav div a{margin-inline-start:12px;font-size:.85rem}}
+</style>
+</head>
+<body>
+<nav><b><img class="logo" src="logo.png" alt="">د. علي يونس</b><div><a href="#about">نبذة</a><a href="#work">أعمالي</a><a href="#samples">نماذج</a><a href="#contact">تواصل</a></div></nav>
+<div class="hero">
+<div class="blob b1"></div><div class="blob b2"></div>
+<img class="ph" src="photo.jpg" alt="د. علي يونس"><span class="tag">معكم في رحلتكم نحو التفوق</span>
+<h1>د. علي يونس</h1>
+<p>يحضر ماجستير | صانع ملازم قانونية</p>
+<a class="btn" href="#contact">للحجز والاستفسار</a>
+</div>
+<section id="about" class="rv">
+<h2>نبذة عني</h2>
+<p>خريج كلية الحقوق بتقدير جيد جدًا، وحاصل على دبلوم قانون عام بتقدير امتياز مع مرتبة الشرف، ويحضر ماجستير حاليًا. أعمل في إعداد الملازم القانونية منذ أكثر من سبع سنوات، وأحرص على أن تكون المادة منظمة وواضحة وجاهزة للمذاكرة والطباعة.</p>
+<div class="stats">
+<div class="stat"><strong>+7</strong><span>سنوات في إعداد الملازم</span></div>
+<div class="stat"><strong>يحضر ماجستير</strong><span>حاليًا</span></div>
+<div class="stat"><strong>جيد جدًا</strong><span>تقدير كلية الحقوق</span></div>
+</div>
+</section>
+<section id="work" class="rv">
+<h2>أعمالي</h2>
+<div class="cards">
+<div class="card rv"><div class="ic">01</div><h3>ملازم دبلوم القانون العام</h3><p>ملازم مذاكرة منظمة لدبلوم القانون العام.</p><div class="subs"><b>مواد الترم الأول:</b><div class="subj"><span>قانون العقوبات مع التعمق</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%A8%D8%A7%D8%AA%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%82%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85">اطلب الملزمة</a></div><div class="subj"><span>القانون الدستوري مع التعمق</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AF%D8%B3%D8%AA%D9%88%D8%B1%D9%8A%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%82%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85">اطلب الملزمة</a></div><div class="subj"><span>القانون الدولي العام</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85">اطلب الملزمة</a></div><div class="subj"><span>مادة اختيارية</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%D9%8A%D8%A9%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85">اطلب الملزمة</a></div><div class="subj"><span>أصول البحث</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D8%A8%D8%AD%D8%AB%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85">اطلب الملزمة</a></div></div><a class="order" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%84%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85">اطلب النسخة كاملة</a></div>
+<div class="card rv"><div class="ic">02</div><h3>ملازم دبلوم القانون الخاص</h3><p>ملازم مذاكرة منظمة لدبلوم القانون الخاص.</p><div class="subs"><b>مواد الترم الأول:</b><div class="subj"><span>القانون المدني مع التعمق</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D9%85%D8%AF%D9%86%D9%8A%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%82%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5">اطلب الملزمة</a></div><div class="subj"><span>القانون التجاري مع التعمق</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%82%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5">اطلب الملزمة</a></div><div class="subj"><span>أحكام المعاملات في الفقه الإسلامي</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%82%D9%87%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5">اطلب الملزمة</a></div><div class="subj"><span>مادة اختيارية</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%D9%8A%D8%A9%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5">اطلب الملزمة</a></div><div class="subj"><span>أصول البحث</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D8%A8%D8%AD%D8%AB%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5">اطلب الملزمة</a></div></div><a class="order" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%84%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5">اطلب النسخة كاملة</a></div>
+<div class="card rv"><div class="ic">03</div><h3>ملازم دبلوم العلوم الجنائية</h3><p>ملازم مذاكرة منظمة لدبلوم العلوم الجنائية.</p><div class="subs"><b>مواد الترم الأول:</b><div class="subj"><span>قانون العقوبات العام</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>علم العقاب (المادة الاختيارية)</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%B9%D9%84%D9%85%20%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%A8%20%28%D8%A7%D9%84%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%D9%8A%D8%A9%29%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>القانون الجنائي الاقتصادي</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%20%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>الإجراءات الجنائية مع التعمق</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%82%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>أصول البحث</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D8%A8%D8%AD%D8%AB%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9">اطلب الملزمة</a></div></div><a class="order" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%84%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D9%8A%D8%A9">اطلب النسخة كاملة</a></div>
+<div class="card rv"><div class="ic">04</div><h3>ملازم دبلوم العلوم الإدارية</h3><p>ملازم مذاكرة منظمة لدبلوم العلوم الإدارية.</p><div class="subs"><b>مواد الترم الأول:</b><div class="subj"><span>الرقابة القضائية على أعمال الإدارة</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A6%D9%8A%D8%A9%20%D8%B9%D9%84%D9%89%20%D8%A3%D8%B9%D9%85%D8%A7%D9%84%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>النيابة الإدارية والمحاكمات التأديبية</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D9%83%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%A3%D8%AF%D9%8A%D8%A8%D9%8A%D8%A9%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>الإدارة المحلية</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>القرارات الإدارية</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%B1%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9">اطلب الملزمة</a></div><div class="subj"><span>أصول البحث</span><a class="subbtn" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%84%D8%B2%D9%85%D8%A9%20%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D8%A8%D8%AD%D8%AB%20-%20%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9">اطلب الملزمة</a></div></div><a class="order" href="https://wa.me/201147219593?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D9%83%D8%A7%D9%85%D9%84%D8%A9%20%D9%84%D8%AF%D8%A8%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9">اطلب النسخة كاملة</a></div>
+</div>
+</section>
+<section id="samples" class="rv">
+<h2>نماذج من الملازم</h2>
+<div class="samples">
+<a href="cover.jpg" target="_blank" rel="noopener"><img src="cover.jpg" alt="غلاف ملزمة التحريض الشرطي" loading="lazy"></a>
+<a href="sample3.jpg" target="_blank" rel="noopener"><img src="sample3.jpg" alt="فهرس ملزمة التحريض الشرطي" loading="lazy"></a>
+<a href="sample1.jpg" target="_blank" rel="noopener"><img src="sample1.jpg" alt="نموذج من ملزمة التحريض الشرطي" loading="lazy"></a>
+<a href="sample2.jpg" target="_blank" rel="noopener"><img src="sample2.jpg" alt="نموذج من ملزمة التحريض الشرطي" loading="lazy"></a>
+</div>
+</section>
+<section id="contact" class="contact rv">
+<h2>تواصل معي</h2>
+<p>للحجز والاستفسار كلمنا على <a href="tel:+201147219593" style="color:inherit"><strong dir="ltr">01147219593</strong></a> أو <a href="tel:+201016195718" style="color:inherit"><strong dir="ltr">01016195718</strong></a></p>
+<a class="btn" style="animation:none" href="https://wa.me/201147219593">تواصل واتساب</a>
+</section>
+<footer>© د. علي يونس</footer>
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(el.classList.contains('card')?(i%4)*0.12:0)+'s';io.observe(el)});
+</script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="46ef09c4-dabc-4f5a-be56-07d112a95590" data-app-host="app.netlify.com" data-account-tier="free"></script>
