@@ -7,7 +7,7 @@ button{font:inherit;cursor:pointer}.b{background:linear-gradient(135deg,#f0b429,
 #e{color:#ff9d9d;text-align:center;min-height:22px}.cnt{color:#a9b4c8;font-size:13px;text-align:center;margin-top:18px}.lk{background:none;border:0;color:#a9b4c8;text-decoration:underline;font-size:13px;display:block;margin:18px auto 0}</style></head><body><div class="w">
 <header><img src="4-icon-192.png" alt=""><h1>ملازم د. علي يونس</h1><p class="s">مكتبتي الخاصة</p></header>
 <div id="lock"><p class="s" style="text-align:center">اكتب الكود الخاص بيك</p><input id="code" type="password" autocomplete="off" autocapitalize="none" spellcheck="false"><div style="text-align:center"><button class="b" id="go">فتح</button></div><div id="e"></div></div>
-<div id="lib" style="display:none"><div id="list"></div><div class="cnt" id="cnt"></div><button class="lk" id="out">قفل</button></div>
+<div id="lib" style="display:none"><div id="list"></div><div class="c" id="pick"><h2>📍 أماكن تواجد الملازم</h2><div class="m" style="margin:6px 0 0;font-size:16px;color:#e9edf5">الملازم متوفرة في مكتبة شباب الخريجين<br>العنوان: آخر سور الجامعة، قصاد الشبان المسلمين</div></div><div class="cnt" id="cnt"></div><button class="lk" id="out">قفل</button></div>
 </div>
 <script>
 const SALT=new TextEncoder().encode("dip-app-v1"),ITER=300000;let KEY=null;
