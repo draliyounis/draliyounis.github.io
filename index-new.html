@@ -358,6 +358,11 @@ section h2::after,section.rv.on h2::after{display:none!important}
 .sw+.sw{bottom:-85px;border-top-width:2px;opacity:.6}
 .hero .ph{box-shadow:0 0 0 6px rgba(240,180,41,.25),0 18px 50px rgba(0,0,0,.5)}
 #booking .bookform{box-shadow:0 12px 30px rgba(7,25,74,.12)}
+.hero>.sw,.hero>.gs{position:absolute}
+.hero>.sw{left:-10%;bottom:-78px;width:120%;height:130px}
+.hero>.sw+.sw{bottom:-94px}
+.car .arl{left:-22px}.car .arr{right:-22px}
+@media(max-width:1100px){.car .arl{left:2px}.car .arr{right:2px}}
 </style>
 <script id="lt-js">(function(){document.querySelectorAll('.cards>.card').forEach(function(card){var c=card.parentNode;var b=document.createElement('button');b.type='button';b.className='tg';b.textContent='عرض المواد والملازم ←';var s=card.querySelector('.subs');card.insertBefore(b,s);b.onclick=function(){var o=card.classList.toggle('open');b.textContent=o?'إخفاء المواد ↑':'عرض المواد والملازم ←';c.dispatchEvent(new Event('pointerdown'));setTimeout(function(){card.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})},60)}})})();
 </script>
