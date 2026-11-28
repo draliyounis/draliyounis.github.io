@@ -99,7 +99,7 @@ footer{text-align:center;padding:26px;color:var(--mut);font-size:.9rem;border-to
 <nav><b><img class="logo" src="logo.png" alt="د. علي يونس"></b></nav>
 <div class="hero">
 <div class="blob b1"></div><div class="blob b2"></div>
-<img class="ph" src="photo.jpg" alt="د. علي يونس"><span class="tag">معكم في رحلتكم نحو التفوق</span>
+<img class="ph" src="2-photo-white-web.jpg" alt="د. علي يونس"><span class="tag">معكم في رحلتكم نحو التفوق</span>
 <h1>دكتور علي يونس</h1>
 <p>صانع محتوى ملازم للدراسات العليا</p>
 <a class="btn" href="#contact">للحجز والاستفسار</a>
@@ -238,5 +238,34 @@ addEventListener('scroll',function(){var h=document.documentElement;b.style.widt
 var hr=document.querySelector('.hero');if(hr){for(var i=0;i<12;i++){var s=document.createElement('i');s.className='sp';s.style.left=(5+i*8)+'%';s.style.animationDelay=(i*0.8)+'s';s.style.animationDuration=(7+i%4*2)+'s';hr.appendChild(s)}}
 var hr0=document.querySelector('.hero');if(hr0&&matchMedia('(hover:hover)').matches){hr0.addEventListener('pointermove',function(e){var r=hr0.getBoundingClientRect();hr0.style.setProperty('--mx',(e.clientX-r.left)+'px');hr0.style.setProperty('--my',(e.clientY-r.top)+'px')})}var vm=document.getElementById('vmenu');if(vm){var a=vm.querySelectorAll('a');a.forEach(function(x,k){x.style.transitionDelay=(k*0.08)+'s'});
 new IntersectionObserver(function(e,o){if(e[0].isIntersecting){vm.classList.add('on');o.disconnect()}},{threshold:.15}).observe(vm)}})();</script>
+<style id="mo2-css">
+.cards,.samples{display:flex!important;flex-wrap:nowrap;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:10px 4px 22px;scrollbar-width:thin;scrollbar-color:#f0b429 transparent}
+.cards>.card{flex:0 0 min(86vw,400px);scroll-snap-align:center}
+.samples>a{flex:0 0 min(60vw,230px);scroll-snap-align:center}
+.cards::-webkit-scrollbar,.samples::-webkit-scrollbar{height:6px}
+.cards::-webkit-scrollbar-thumb,.samples::-webkit-scrollbar-thumb{background:#f0b429;border-radius:6px}
+.car{position:relative}
+.car .ar{position:absolute;top:42%;z-index:5;width:44px;height:44px;border-radius:50%;border:1px solid #f0b429;background:rgba(10,25,70,.85);color:#f0b429;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s;animation:glow 2.8s infinite}
+.car .ar:hover{background:#f0b429;color:#111;transform:scale(1.12)}
+.car .arl{left:4px}.car .arr{right:4px}
+.car .hint{text-align:center;color:#f0b429;font-size:.9rem;opacity:.85;animation:hn 1.6s ease-in-out infinite}
+@keyframes hn{50%{transform:translateX(-8px)}}
+@media(max-width:600px){.car .ar{display:none}}
+.ph{background:#fff;object-view-box:inset(0 10% 24% 10%);object-position:50% 0;animation:ring 3s ease-in-out infinite}
+@keyframes ring{0%,100%{box-shadow:0 0 0 0 rgba(240,180,41,.55)}50%{box-shadow:0 0 0 22px rgba(240,180,41,0),0 0 50px rgba(240,180,41,.45)}}
+.hero .tag{animation:bob 3.5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.blob{animation-duration:8s!important;opacity:.5!important}
+.card::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(240,180,41,.18),transparent);transform:skewX(-20deg);animation:swp 5s ease-in-out infinite;pointer-events:none}
+.samples a{animation:fl 5s ease-in-out infinite}.samples a:nth-child(2n){animation-delay:-2.5s}
+@keyframes fl{50%{transform:translateY(-8px)}}
+section h2{background:linear-gradient(90deg,#fff,#f0b429,#fff);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@media(prefers-reduced-motion:reduce){.car .hint,.card::after{display:none}}
+</style><script>(function(){
+document.querySelectorAll('.hero').forEach(function(hr){for(var i=0;i<14;i++){var s=document.createElement('i');s.className='sp';s.style.left=(Math.random()*95)+'%';s.style.width=s.style.height=(4+Math.random()*7)+'px';s.style.animationDelay=(Math.random()*8)+'s';s.style.animationDuration=(5+Math.random()*5)+'s';hr.appendChild(s)}});
+document.querySelectorAll('.cards,.samples').forEach(function(c){var w=document.createElement('div');w.className='car';c.parentNode.insertBefore(w,c);w.appendChild(c);
+function mk(cl,tx,d){var b=document.createElement('button');b.type='button';b.className='ar '+cl;b.textContent=tx;b.setAttribute('aria-label',d>0?'next':'prev');b.onclick=function(){c.scrollBy({left:d*(c.clientWidth*0.8),behavior:'smooth'})};w.appendChild(b)}
+mk('arl','›',1);mk('arr','‹',-1);
+var h=document.createElement('div');h.className='hint';h.textContent='◂ اسحب يمين وشمال ▸';w.appendChild(h)})})();</script>
 </body>
 </html>
