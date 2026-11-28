@@ -267,5 +267,6 @@ document.querySelectorAll('.cards,.samples').forEach(function(c){var w=document.
 function mk(cl,tx,d){var b=document.createElement('button');b.type='button';b.className='ar '+cl;b.textContent=tx;b.setAttribute('aria-label',d>0?'next':'prev');b.onclick=function(){c.scrollBy({left:d*(c.clientWidth*0.8),behavior:'smooth'})};w.appendChild(b)}
 mk('arl','›',1);mk('arr','‹',-1);
 var h=document.createElement('div');h.className='hint';h.textContent='◂ اسحب يمين وشمال ▸';w.appendChild(h)})})();</script>
+<style id="mo3-css">.cards,.samples{overflow-y:hidden!important;padding-top:14px!important}</style>
 </body>
 </html>
