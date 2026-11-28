@@ -268,5 +268,18 @@ function mk(cl,tx,d){var b=document.createElement('button');b.type='button';b.cl
 mk('arl','›',1);mk('arr','‹',-1);
 var h=document.createElement('div');h.className='hint';h.textContent='◂ اسحب يمين وشمال ▸';w.appendChild(h)})})();</script>
 <style id="mo3-css">.cards,.samples{overflow-y:hidden!important;padding-top:14px!important}</style>
+<script id="mo4-js">(function(){
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('.cards').forEach(function(c){
+var sg=getComputedStyle(c).direction==='rtl'?-1:1,paused=0,vis=false,last=0;
+function pos(){return Math.abs(c.scrollLeft)}
+function max(){return c.scrollWidth-c.clientWidth}
+function go(dir){var st=(c.firstElementChild.getBoundingClientRect().width+18),p=pos()+dir*st;if(p>max()+4)p=0;if(p<0)p=max();c.scrollTo({left:sg*p,behavior:'smooth'})}
+var car=c.parentNode;car.querySelectorAll('.ar').forEach(function(b){var d=b.classList.contains('arl')?1:-1;b.onclick=function(){pause();go(d)}});
+function pause(){paused=Date.now()+9000}
+['pointerdown','touchstart','wheel','mouseenter'].forEach(function(e){c.addEventListener(e,pause,{passive:true})});
+new IntersectionObserver(function(e){vis=e[0].isIntersecting},{threshold:.4}).observe(c);
+if(!rm){setInterval(function(){if(vis&&Date.now()>paused&&!document.hidden)go(1)},3200)}
+})})();</script>
 </body>
 </html>
